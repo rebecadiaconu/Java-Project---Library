@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="dba217d1-cad8-4a30-8ec9-dd37d6248707" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ZdJmxlQTJH1Jqsa6WKYEI2m9eW" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="create.test.in.the.same.root" value="true" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="pao.proiect" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="pao.proiect.Main" />
+      <module name="Proiect" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dba217d1-cad8-4a30-8ec9-dd37d6248707" name="Default Changelist" comment="" />
+      <created>1585163201031</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585163201031</updated>
+      <workItem from="1585163204623" duration="1345000" />
+      <workItem from="1585214401345" duration="16017000" />
+      <workItem from="1585306552657" duration="21828000" />
+      <workItem from="1585425557427" duration="2680000" />
+      <workItem from="1585475850402" duration="33036000" />
+      <workItem from="1585518357408" duration="845000" />
+      <workItem from="1585552772543" duration="28925000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="398" y="313" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1585578974609">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="398" y="313" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1585578974609" />
+    <state x="1245" y="274" key="#com.intellij.ide.util.MemberChooser" timestamp="1585578978589">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="1245" y="274" key="#com.intellij.ide.util.MemberChooser/0.30.1920.1050@0.30.1920.1050" timestamp="1585578978589" />
+    <state x="1170" y="302" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585312098737">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="1170" y="302" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1585312098737" />
+    <state x="1220" y="310" key="FileChooserDialogImpl" timestamp="1585227520466">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="1220" y="310" key="FileChooserDialogImpl/0.30.1920.1050@0.30.1920.1050" timestamp="1585227520466" />
+    <state width="1877" height="286" key="GridCell.Tab.0.bottom" timestamp="1585583449760">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="286" key="GridCell.Tab.0.bottom/0.30.1920.1050@0.30.1920.1050" timestamp="1585583449760" />
+    <state width="1877" height="286" key="GridCell.Tab.0.center" timestamp="1585583449760">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="286" key="GridCell.Tab.0.center/0.30.1920.1050@0.30.1920.1050" timestamp="1585583449760" />
+    <state width="1877" height="286" key="GridCell.Tab.0.left" timestamp="1585583449760">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="286" key="GridCell.Tab.0.left/0.30.1920.1050@0.30.1920.1050" timestamp="1585583449760" />
+    <state width="1877" height="286" key="GridCell.Tab.0.right" timestamp="1585583449760">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="286" key="GridCell.Tab.0.right/0.30.1920.1050@0.30.1920.1050" timestamp="1585583449760" />
+    <state x="461" y="197" key="SettingsEditor" timestamp="1585318699548">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="461" y="197" key="SettingsEditor/0.30.1920.1050@0.30.1920.1050" timestamp="1585318699548" />
+    <state x="1211" y="261" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1585561282230">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="1211" y="261" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1585561282230" />
+    <state x="690" y="335" key="extract.method.dialog" timestamp="1585517191490">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="690" y="335" key="extract.method.dialog/0.30.1920.1050@0.30.1920.1050" timestamp="1585517191490" />
+    <state x="1103" y="263" width="672" height="678" key="search.everywhere.popup" timestamp="1585575530417">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="1103" y="263" width="672" height="678" key="search.everywhere.popup/0.30.1920.1050@0.30.1920.1050" timestamp="1585575530417" />
+  </component>
+</project>
