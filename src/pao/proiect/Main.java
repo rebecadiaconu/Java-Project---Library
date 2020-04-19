@@ -1,19 +1,40 @@
 package pao.proiect;
 
+import pao.proiect.beings.Client;
 import pao.proiect.books.*;
+import pao.proiect.library.Comanda;
+import pao.proiect.library.Librarie;
+import pao.proiect.library.Rubrica;
+import pao.proiect.persistence.Persistance;
 
-import java.util.HashSet;
-import java.util.Scanner;
-import java.util.Set;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.*;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        Persistance service = Persistance.getInstance();
         Scanner sc = new Scanner(System.in);
-        System.out.println("Pentru a putea executa orice interogare posibila, va rog sa cititi mai intai o librarie!");
-        Librarie ob = new Librarie().citesteLibrarie();
+
+        Client cl = new Client();
+        Comanda com = new Comanda();
+        Literar lit = new Literar();
+        Nonliterar nonlit = new Nonliterar();
+        Rubrica r = new Rubrica();
+        Librarie ob = new Librarie();
+        List<Librarie> l = new ArrayList<>();
+
+        BufferedReader verifLib = new BufferedReader(new FileReader("librarie.csv"));
+        if (verifLib.readLine() != null) {
+            l = Persistance.citireDinFisier(ob);
+            ob = l.get(0);
+        }
+
 
         while(true) {
+            System.out.println();
             System.out.println("Doriti sa realizati actiuni ca? \n1. Manager librarie \n2. Client");
             System.out.println("3. Doriti sa iesiti din meniu.");
             int alegere = sc.nextInt();
@@ -22,29 +43,24 @@ public class Main {
                 System.out.println("1. Adaugare carte in stoc");
                 System.out.println("2. Modificare pret carte ");
                 System.out.println("3. Afla cine este cel mai devotat client la momentul actual! ");
-                System.out.println("4. Doriti sa iesiti din modul manager");
+                System.out.println("4. Afisare detalii comanda!");
+                System.out.println("5. Doriti sa iesiti din modul manager");
                 int choise = sc.nextInt();
                 sc.nextLine();
                 switch(choise) {
                     case 1:
-                        Carte c;
-                        System.out.println("Cartea apartine genului: \n1. Epic \n2. Liric \n3. Dramatic \n4. Este text nonliterar");
-                        alegere = sc.nextInt();
+                        Integer index;
+                        Carte c = new Carte();
+                        System.out.println("Cartea este un text: 1 - literar, 2 - nonliterar");
+                        index = sc.nextInt();
                         sc.nextLine();
-                        if (alegere == 1) {
-                            c = new Epic().citeste();
+                        if (index == 1) {
+                            c = new Literar().citeste(index);
                         }
-                        else if (alegere == 2) {
-                            c = new Liric().citeste();
+                        else if (index == 2) {
+                            c = new Nonliterar().citeste(index);
                         }
-                        else if (alegere == 3) {
-                            c = new Dramatic().citeste();
-                        }
-                        else {
-                            c = new Nonliterar();
-                        }
-                        Integer nrCarti;
-                        ob.adaugaCarte(c);
+                        ob.adaugaCarte(index, c);
                         break;
                     case 2:
                         String nume, autor;
@@ -58,6 +74,12 @@ public class Main {
                         ob.celMaiDevotatClient();
                         break;
                     case 4:
+                        String numarComanda;
+                        System.out.println("Introduceti numarul comenzii (maximum 6 cifre): ");
+                        numarComanda = sc.nextLine();
+                        ob.detaliiComanda(numarComanda);
+                        break;
+                    case 5:
                         break;
                 }
             }
@@ -70,9 +92,10 @@ public class Main {
                 System.out.println("5. Afisare opere disponibile intr-o anumita limba");
                 System.out.println("6. Afisare detalii carte");
                 System.out.println("7. Comanda!");
-                System.out.println("8. Cate carti am cumparat de la aceasta librarie? ");
+                System.out.println("8. Cate comenzi am de la aceasta librarie? ");
                 System.out.println("9. Afisare Bestseller!");
-                System.out.println("10. Doriti sa iesiti din modul client");
+                System.out.println("10. Afisare detalii comanda!");
+                System.out.println("11. Doriti sa iesiti din modul client");
                 int choise = sc.nextInt();
                 sc.nextLine();
                 switch(choise) {
@@ -132,16 +155,29 @@ public class Main {
                         String CNP;
                         System.out.println("Va rog introduceti-va CNP-ul in formatul corect: ");
                         CNP = sc.nextLine();
-                        ob.cateCartiAmCumparat(CNP);
+                        ob.numarComenziDate(CNP);
                         break;
                     case 9:
                         ob.getBestSeller();
                         break;
                     case 10:
+                        String numarComanda;
+                        System.out.println("Introduceti numarul comenzii (maximum 6 cifre): ");
+                        numarComanda = sc.nextLine();
+                        ob.detaliiComanda(numarComanda);
+                        break;
+                    case 11:
                         break;
                 }
             }
             if (alegere == 3) {
+                l.set(0, ob);
+                Persistance.scriereInFisier(cl, l);
+                Persistance.scriereInFisier(lit, l);
+                Persistance.scriereInFisier(nonlit, l);
+                Persistance.scriereInFisier(com, l);
+                Persistance.scriereInFisier(r, l);
+                Persistance.scriereInFisier(ob, l);
                 break;
             }
         }

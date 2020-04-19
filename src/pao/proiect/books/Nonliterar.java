@@ -5,38 +5,20 @@ import pao.proiect.beings.Autor;
 import java.util.List;
 import java.util.Scanner;
 
-public class Nonliterar extends Carte implements Digital, Fizic{
-    private double pretF;
-    private double pretD;
+public class Nonliterar extends Carte{
     private String specie;
     private String tipText;
 
-    public Nonliterar(String titlu, Autor autor, List<String> limba, List<String> cuvCheie, Integer nrExemplare, Integer nrPagini, Integer cump, String specie, String gen) {
-        super(titlu, autor, limba, cuvCheie, nrExemplare, nrPagini, cump);
+    public Nonliterar(String titlu, Autor autor, List<String> limba, List<String> cuvCheie, Integer tip, Integer nrExemplare, Integer nrPagini, Integer cump, double pD, double pF, String specie, String gen) {
+        super(titlu, autor, limba, cuvCheie, tip, nrExemplare, nrPagini, cump, pD, pF);
         this.specie = specie;
         this.tipText = gen;
-        this.pretD = pretDigital();
-        this.pretF = pretFizic();
     }
 
     public Nonliterar() {
+        super();
         this.specie = "Necunoscuta";
         this.tipText = "Necunoscut";
-    }
-    public double getPretF() {
-        return pretF;
-    }
-
-    public void setPretF(double pretF) {
-        this.pretF = pretF;
-    }
-
-    public double getPretD() {
-        return pretD;
-    }
-
-    public void setPretD(double pretD) {
-        this.pretD = pretD;
     }
 
     public String getSpecie() {
@@ -47,55 +29,43 @@ public class Nonliterar extends Carte implements Digital, Fizic{
         this.specie = specie;
     }
 
-    public String getGen() {
+    public String getTiptext() {
         return tipText;
     }
 
-    public void setGen(String gen) {
-        this.tipText = gen;
+    public void setTiptext(String tip) {
+        this.tipText = tip;
     }
 
-    @Override
-    public double pretDigital() {
-        double pret = 1.015 * super.getPret();
-        return 1.07 * pret;
-    }
 
-    @Override
-    public double pretFizic() {
-        double pret = 1.015 * super.getPret();
-        return 1.1 * pret;
-    }
-
-    public Nonliterar citeste() {
-        Carte c = super.citeste();
+    public Nonliterar citeste(Integer index) {
         int alegere;
-        String sp, gen;
+        String sp, tip;
         Scanner sc = new Scanner(System.in);
+
+        Carte c = super.citeste(index);
 
         System.out.println("Opera introdusa face parte din urmatoarea specie: \n1. Jurnal si memorii \n2. Enciclopedie \n3. Articol");
         alegere = sc.nextInt();
         sc.nextLine();
         if (alegere == 1) {
             sp = "Jurnal si memorii";
-            gen = "Autobiografic";
+            tip = "Autobiografic";
         }
         else if (alegere == 2) {
             sp = "Enciclopedie";
-            gen = "Informativ";
+            tip = "Informativ";
         }
         else {
             sp = "Articol";
-            gen = "Informativ";
+            tip = "Informativ";
         }
 
-        return new Nonliterar(c.getTitlu(), c.getAutor(), c.getLimba(), c.getCuvCheie(), c.getNrExemplare(), c.getNrPagini(), c.getExemCumparate(), sp, gen);
+        return new Nonliterar(c.getTitlu(), c.getAutor(), c.getLimba(), c.getCuvCheie(), c.getTipText(), c.getNrExemplare(), c.getNrPagini(), c.getExemCumparate(), 0, 0, sp, tip);
     }
 
     public void afisare() {
         super.afiseaza();
-        System.out.println("Opera face parte din specia: " + specie + " si scopul acesteia este unul " + tipText.toLowerCase());
-        System.out.println("Pret carte varianta digitala: " + pretD);
-        System.out.println("Pret carte varianta fizica: " + pretF);
+        System.out.println("Opera face parte din specia: " + specie.toLowerCase() + " si scopul acesteia este unul " + tipText.toLowerCase());
     }
 }

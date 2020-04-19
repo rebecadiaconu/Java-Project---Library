@@ -7,14 +7,9 @@ import java.util.Scanner;
 public class Autor extends Persoana {
     private int nrCartiScrise;
 
-    public Autor(String nume, String prenume, String anNastere, String anDeces, String sex, int nrCartiScrise) {
-        super(nume, prenume, anNastere, anDeces, sex);
+    public Autor(String nume, String prenume, String sex, int nrCartiScrise) {
+        super(nume, prenume, sex);
         this.nrCartiScrise = nrCartiScrise;
-    }
-
-    public Autor() {
-        super();
-        this.nrCartiScrise = 0;
     }
 
     public int getNrCartiScrise() {
@@ -23,6 +18,11 @@ public class Autor extends Persoana {
 
     public void setNrCartiScrise(int nrCartiScrise) {
         this.nrCartiScrise = nrCartiScrise;
+    }
+
+    public Autor() {
+        super();
+        this.nrCartiScrise = 0;
     }
 
     public void afiseaza(){
@@ -47,7 +47,7 @@ public class Autor extends Persoana {
         nr = sc.nextInt();
         sc.nextLine();
 
-        return new Autor(p.getNume(), p.getPrenume(), p.getAnNastere(), p.getAnDeces(), p.getSex(), nr);
+        return new Autor(p.getNume(), p.getPrenume(), p.getSex(), nr);
     }
 
 }
