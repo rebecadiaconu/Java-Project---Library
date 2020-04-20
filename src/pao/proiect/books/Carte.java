@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 import static java.lang.Math.round;
 
-public class Carte implements Digital, Fizic{
+public class Carte implements Digital, Fizic {
     private String titlu;
     private Autor autor;
     private List<String> limba;
@@ -165,13 +165,16 @@ public class Carte implements Digital, Fizic{
 
     public Carte citeste(Integer index) {
         int nrPag, nrExempl;
-        String str, str1, str2, titlu;
+        String aux1;
+        String aux2;
+        String aux3;
+        String titlu;
         Autor a = new Autor();
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Introduceti titlul cartii: ");
-        str = sc.nextLine();
-        titlu = str.substring(0, 1).toLowerCase() + str.substring(1).toLowerCase();
+        aux1 = sc.nextLine();
+        titlu = aux1.substring(0, 1).toLowerCase() + aux1.substring(1).toLowerCase();
         System.out.println("Detalii autor: ");
         Autor nou = a.citeste();
         System.out.println("Numar pagini carte: ");
@@ -180,12 +183,12 @@ public class Carte implements Digital, Fizic{
         nrExempl = sc.nextInt();
         sc.nextLine();
         System.out.println("Cartea este disponibila in limbile (separate prin VIRGULA): ");
-        str1 = sc.nextLine();
-        String[] arrr = str1.split(",");
+        aux2 = sc.nextLine();
+        String[] arrr = aux2.split(",");
         List<String> limba = new ArrayList<>(Arrays.asList(arrr));
         System.out.println("Introduceti cateva cuvinte cheie ce descriu opera (separate prin VIRGULA): ");
-        str2 = sc.nextLine();
-        String[] arr = str2.split(",");
+        aux3 = sc.nextLine();
+        String[] arr = aux3.split(",");
         List<String> cuvCheie = new ArrayList<>(Arrays.asList(arr));
 
         Carte c = new Carte(titlu, nou, limba, cuvCheie, index, nrExempl, nrPag, 0, 0, 0);

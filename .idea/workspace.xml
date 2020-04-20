@@ -2,30 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dba217d1-cad8-4a30-8ec9-dd37d6248707" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proiect/pao/proiect/Librarie.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audit.csv" beforeDir="false" afterPath="$PROJECT_DIR$/audit.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/literar.csv" beforeDir="false" afterPath="$PROJECT_DIR$/literar.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Proiect/pao/proiect/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proiect/pao/proiect/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proiect/pao/proiect/Rubrica.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proiect/pao/proiect/beings/Autor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proiect/pao/proiect/beings/Autor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proiect/pao/proiect/beings/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proiect/pao/proiect/beings/Client.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Proiect/pao/proiect/beings/Persoana.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proiect/pao/proiect/beings/Persoana.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Proiect/pao/proiect/books/Carte.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proiect/pao/proiect/books/Carte.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proiect/pao/proiect/books/Dramatic.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proiect/pao/proiect/books/Epic.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proiect/pao/proiect/books/Liric.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proiect/pao/proiect/books/Literar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proiect/pao/proiect/books/Literar.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Proiect/pao/proiect/books/Nonliterar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proiect/pao/proiect/books/Nonliterar.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pao/proiect/Librarie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pao/proiect/library/Librarie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proiect/pao/proiect/library/Librarie.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proiect/pao/proiect/library/Librarie.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proiect/pao/proiect/persistence/Persistance.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proiect/pao/proiect/persistence/Persistance.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pao/proiect/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pao/proiect/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pao/proiect/Rubrica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pao/proiect/library/Rubrica.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pao/proiect/beings/Autor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pao/proiect/beings/Autor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pao/proiect/beings/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pao/proiect/beings/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pao/proiect/beings/Persoana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pao/proiect/beings/Persoana.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pao/proiect/books/Carte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pao/proiect/books/Carte.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pao/proiect/books/Dramatic.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pao/proiect/books/Epic.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pao/proiect/books/Liric.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pao/proiect/books/Literar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pao/proiect/books/Literar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pao/proiect/books/Nonliterar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pao/proiect/books/Nonliterar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pao/proiect/library/Librarie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pao/proiect/library/Librarie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pao/proiect/persistence/Persistance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pao/proiect/persistence/Persistance.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,6 +101,8 @@
       <workItem from="1587152168930" duration="1082000" />
       <workItem from="1587201348977" duration="44953000" />
       <workItem from="1587282216080" duration="12043000" />
+      <workItem from="1587399704315" duration="6232000" />
+      <workItem from="1587407215771" duration="38000" />
     </task>
     <servers />
   </component>
@@ -133,30 +130,30 @@
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="1220" y="310" key="FileChooserDialogImpl/0.30.1920.1050@0.30.1920.1050" timestamp="1585227520466" />
-    <state width="1877" height="283" key="GridCell.Tab.0.bottom" timestamp="1587312315369">
+    <state width="1877" height="283" key="GridCell.Tab.0.bottom" timestamp="1587407101980">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state width="1877" height="283" key="GridCell.Tab.0.bottom/0.30.1920.1050@0.30.1920.1050" timestamp="1587312315369" />
-    <state width="1877" height="283" key="GridCell.Tab.0.center" timestamp="1587312315369">
+    <state width="1877" height="283" key="GridCell.Tab.0.bottom/0.30.1920.1050@0.30.1920.1050" timestamp="1587407101980" />
+    <state width="1877" height="283" key="GridCell.Tab.0.center" timestamp="1587407101980">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state width="1877" height="283" key="GridCell.Tab.0.center/0.30.1920.1050@0.30.1920.1050" timestamp="1587312315369" />
-    <state width="1877" height="283" key="GridCell.Tab.0.left" timestamp="1587312315369">
+    <state width="1877" height="283" key="GridCell.Tab.0.center/0.30.1920.1050@0.30.1920.1050" timestamp="1587407101980" />
+    <state width="1877" height="283" key="GridCell.Tab.0.left" timestamp="1587407101980">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state width="1877" height="283" key="GridCell.Tab.0.left/0.30.1920.1050@0.30.1920.1050" timestamp="1587312315369" />
-    <state width="1877" height="283" key="GridCell.Tab.0.right" timestamp="1587312315369">
+    <state width="1877" height="283" key="GridCell.Tab.0.left/0.30.1920.1050@0.30.1920.1050" timestamp="1587407101980" />
+    <state width="1877" height="283" key="GridCell.Tab.0.right" timestamp="1587407101980">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state width="1877" height="283" key="GridCell.Tab.0.right/0.30.1920.1050@0.30.1920.1050" timestamp="1587312315369" />
+    <state width="1877" height="283" key="GridCell.Tab.0.right/0.30.1920.1050@0.30.1920.1050" timestamp="1587407101980" />
     <state x="512" y="148" key="SettingsEditor" timestamp="1587282340706">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="512" y="148" key="SettingsEditor/0.30.1920.1050@0.30.1920.1050" timestamp="1587282340706" />
-    <state x="771" y="474" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1587312745022">
+    <state x="771" y="474" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1587407087450">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state x="771" y="474" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.30.1920.1050@0.30.1920.1050" timestamp="1587312745022" />
+    <state x="771" y="474" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.30.1920.1050@0.30.1920.1050" timestamp="1587407087450" />
     <state x="1211" y="261" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1585561282230">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>

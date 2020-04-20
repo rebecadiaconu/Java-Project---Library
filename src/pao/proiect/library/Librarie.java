@@ -93,7 +93,8 @@ public class Librarie {
 
     public Librarie citesteLibrarie() {
         int nrRub;
-        String str, nume, adresa;
+        String nume;
+        String adresa;
         List<Rubrica> rub = new ArrayList<>();
         List<Client> cl = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
@@ -144,7 +145,9 @@ public class Librarie {
 
     public <T extends Carte> void adaugaCarte(Integer index, T book) {
         Scanner sc = new Scanner(System.in);
-        int found = 0, pozC = -1, pozR = -1;
+        int found = 0;
+        int pozC = -1;
+        int pozR = -1;
 
         // parcurgem toate cartile pe care le avem in librarie si verificam daca
         // cartea pe care dorim sa o adaugam este deja in stoc sau nu
@@ -340,7 +343,7 @@ public class Librarie {
     }
 
     public void celMaiDevotatClient() {
-        if (getClienti().size() > 0){
+        if (getClienti().size() > 0) {
             getClienti().sort((cl1, cl2) -> cl2.getNumarCartiCump() - cl1.getNumarCartiCump());
             System.out.println("Cel mai devotat client in momentul actual: ");
             getClienti().get(0).afiseaza();
@@ -352,7 +355,8 @@ public class Librarie {
     }
 
     public void Comanda(Integer m) {
-        Integer nr = m, met = 0;
+        Integer nr = m;
+        Integer met = 0;
         double pretComanda = 0;
         String metodaPlata = "";
         int nrComanda;
@@ -528,7 +532,7 @@ public class Librarie {
     }
 
     public void numarComenziDate(String s) {
-        if (getClienti().size() > 0){
+        if (getClienti().size() > 0) {
             int  ok = 0;
             for (Client cl : clienti) {
                 if (cl.getCNP().equals(s)) {

@@ -32,7 +32,10 @@ public class Persoana {
     }
 
     Persoana citeste() {
-        String str, nume, prenume, sex;
+        String str;
+        String nume;
+        String prenume;
+        String sex;
         Integer ok;
         Scanner sc = new Scanner(System.in);
 

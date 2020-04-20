@@ -28,7 +28,7 @@ public class Main {
 
         BufferedReader verifLib = new BufferedReader(new FileReader("librarie.csv"));
         if (verifLib.readLine() != null) {
-            l = Persistance.citireDinFisier(ob);
+            l = service.librarieDinFisier();
             ob = l.get(0);
         }
 
@@ -172,12 +172,12 @@ public class Main {
             }
             if (alegere == 3) {
                 l.set(0, ob);
-                Persistance.scriereInFisier(cl, l);
-                Persistance.scriereInFisier(lit, l);
-                Persistance.scriereInFisier(nonlit, l);
-                Persistance.scriereInFisier(com, l);
-                Persistance.scriereInFisier(r, l);
-                Persistance.scriereInFisier(ob, l);
+                service.scrieClient(l);
+                service.scrieComanda(l);
+                service.scrieLiterar(l);
+                service.scrieNonliterar(l);
+                service.scrieRubrica(l);
+                service.scriereLibrarie(l);
                 break;
             }
         }

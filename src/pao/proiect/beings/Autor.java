@@ -25,7 +25,7 @@ public class Autor extends Persoana {
         this.nrCartiScrise = 0;
     }
 
-    public void afiseaza(){
+    public void afiseaza() {
         super.afiseaza();
 
         if (this.nrCartiScrise > 0) {

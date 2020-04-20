@@ -84,7 +84,7 @@ public class Client extends Persoana {
         return new Client(p.getNume(), p.getPrenume(), p.getSex(), cnp, card, comenzi);
     }
 
-    public void afiseaza(){
+    public void afiseaza() {
         super.afiseaza();
         System.out.println("Clientul " + this.getNume().toUpperCase() + " " + this.getPrenume().toUpperCase() + " are CNP-ul: " + this.getCNP());
         if (this.getAreCard() == 0) {

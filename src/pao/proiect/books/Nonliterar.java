@@ -5,7 +5,7 @@ import pao.proiect.beings.Autor;
 import java.util.List;
 import java.util.Scanner;
 
-public class Nonliterar extends Carte{
+public class Nonliterar extends Carte {
     private String specie;
     private String tipText;
 
@@ -40,7 +40,8 @@ public class Nonliterar extends Carte{
 
     public Nonliterar citeste(Integer index) {
         int alegere;
-        String sp, tip;
+        String specie;
+        String tipLit;
         Scanner sc = new Scanner(System.in);
 
         Carte c = super.citeste(index);
@@ -49,19 +50,19 @@ public class Nonliterar extends Carte{
         alegere = sc.nextInt();
         sc.nextLine();
         if (alegere == 1) {
-            sp = "Jurnal si memorii";
-            tip = "Autobiografic";
+            specie = "Jurnal si memorii";
+            tipLit = "Autobiografic";
         }
         else if (alegere == 2) {
-            sp = "Enciclopedie";
-            tip = "Informativ";
+            specie = "Enciclopedie";
+            tipLit = "Informativ";
         }
         else {
-            sp = "Articol";
-            tip = "Informativ";
+            specie = "Articol";
+            tipLit = "Informativ";
         }
 
-        return new Nonliterar(c.getTitlu(), c.getAutor(), c.getLimba(), c.getCuvCheie(), c.getTipText(), c.getNrExemplare(), c.getNrPagini(), c.getExemCumparate(), 0, 0, sp, tip);
+        return new Nonliterar(c.getTitlu(), c.getAutor(), c.getLimba(), c.getCuvCheie(), c.getTipText(), c.getNrExemplare(), c.getNrPagini(), c.getExemCumparate(), 0, 0, specie, tipLit);
     }
 
     public void afisare() {

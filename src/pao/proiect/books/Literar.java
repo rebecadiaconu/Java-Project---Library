@@ -5,7 +5,7 @@ import pao.proiect.beings.Autor;
 import java.util.List;
 import java.util.Scanner;
 
-public class Literar extends Carte{
+public class Literar extends Carte {
     private String specie;
     private String genLit;
 
@@ -39,7 +39,8 @@ public class Literar extends Carte{
 
     public Literar citeste(Integer index) {
         int alegere;
-        String sp = "", gen = "";
+        String specie = "";
+        String genLit = "";
         Scanner sc = new Scanner(System.in);
 
         Carte c = super.citeste(index);
@@ -48,35 +49,35 @@ public class Literar extends Carte{
         alegere = sc.nextInt();
         sc.nextLine();
         if (alegere == 1) {
-            sp = "Roman";
-            gen = "Epic";
+            specie = "Roman";
+            genLit = "Epic";
         }
         else if (alegere == 2) {
-            sp = "Basm";
-            gen = "Epic";
+            specie = "Basm";
+            genLit = "Epic";
         }
         else if (alegere == 3) {
-            sp = "Nuvela";
-            gen = "Epic";
+            specie = "Nuvela";
+            genLit = "Epic";
         }
         else if (alegere == 4) {
-            sp = "Teatru si schite";
-            gen = "Dramatic";
+            specie = "Teatru si schite";
+            genLit = "Dramatic";
         }
         else if (alegere == 5) {
-            sp = "Poezie";
-            gen = "Liric";
+            specie = "Poezie";
+            genLit = "Liric";
         }
         else if (alegere == 6) {
-            sp = "Balada";
-            gen = "Liric";
+            specie = "Balada";
+            genLit = "Liric";
         }
         else if (alegere == 7) {
-            sp = "Imn";
-            gen = "Liric";
+            specie = "Imn";
+            genLit = "Liric";
         }
 
-        return new Literar(c.getTitlu(), c.getAutor(), c.getLimba(), c.getCuvCheie(), c.getTipText(), c.getNrExemplare(), c.getNrPagini(), c.getExemCumparate(), 0, 0, sp, gen);
+        return new Literar(c.getTitlu(), c.getAutor(), c.getLimba(), c.getCuvCheie(), c.getTipText(), c.getNrExemplare(), c.getNrPagini(), c.getExemCumparate(), 0, 0, specie, genLit);
     }
 
     public void afisare() {
