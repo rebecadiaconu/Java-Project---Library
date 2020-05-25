@@ -5,7 +5,6 @@ import pao.proiect.books.Carte;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class Comanda {
     private String nrComanda;
@@ -68,18 +67,5 @@ public class Comanda {
         return total;
     }
 
-    public void afisareComanda() {
-        System.out.println("Numar comanda: " + this.nrComanda);
-        System.out.println("Numar total carti comandate: " + cartiComanda());
-        System.out.println("Continut comanda: ");
-        for (Pair<Carte, Integer> c : cartiComandate) {
-            System.out.println("Cartea " + c.getKey().getTitlu() + " este scrisa de " + c.getKey().getAutor().getNume() + " " + c.getKey().getAutor().getPrenume() + ".");
-            System.out.println("Disponibila in: " + c.getKey().getLimba());
-            System.out.println("Pret varianta digitala: " + c.getKey().getPretD());
-            System.out.println("Pret varianta fizica: " + c.getKey().getPretF());
-            System.out.println("Numar exemplare carte: " + c.getValue());
-        }
-        System.out.println("Sumar comanda: " + this.pretComanda);
-        System.out.println("Metoda de plata: " +  this.metodaPlata);
-    }
+
 }

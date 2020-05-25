@@ -1,20 +1,16 @@
 package pao.proiect.books;
 
 import pao.proiect.beings.Autor;
-
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Scanner;
-
 import static java.lang.Math.round;
 
-public class Carte implements Digital, Fizic {
+public class Carte implements Digital, Fizic{
     private String titlu;
     private Autor autor;
     private List<String> limba;
     private List<String> cuvCheie;
-    private Integer tipText;
+    private Integer tip;
     private Integer nrExemplare;
     private Integer nrPagini;
     private Integer exemCumparate;
@@ -26,7 +22,7 @@ public class Carte implements Digital, Fizic {
         this.autor = autor;
         this.limba = limba;
         this.cuvCheie = cuvCheie;
-        this.tipText = tip;
+        this.tip = tip;
         this.nrExemplare = nrExemplare;
         this.nrPagini = nrPagini;
         this.exemCumparate = exemCumparate;
@@ -49,7 +45,7 @@ public class Carte implements Digital, Fizic {
         this.autor = new Autor();
         this.limba = new ArrayList<>();
         this.cuvCheie = new ArrayList<>();
-        this.tipText = -1;
+        this.tip = -1;
         this.nrExemplare = 0;
         this.nrPagini = 0;
         this.exemCumparate = 0;
@@ -113,12 +109,12 @@ public class Carte implements Digital, Fizic {
         this.exemCumparate = exemCumparate;
     }
 
-    public Integer getTipText() {
-        return tipText;
+    public Integer getTip() {
+        return tip;
     }
 
-    public void setTipText(Integer tipText) {
-        this.tipText = tipText;
+    public void setTip(Integer tipText) {
+        this.tip = tipText;
     }
 
     public double getPretF() {
@@ -163,60 +159,17 @@ public class Carte implements Digital, Fizic {
         return round(pret * 100) / 100.00;
     }
 
-    public Carte citeste(Integer index) {
-        int nrPag, nrExempl;
-        String aux1;
-        String aux2;
-        String aux3;
-        String titlu;
-        Autor a = new Autor();
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("Introduceti titlul cartii: ");
-        aux1 = sc.nextLine();
-        titlu = aux1.substring(0, 1).toLowerCase() + aux1.substring(1).toLowerCase();
-        System.out.println("Detalii autor: ");
-        Autor nou = a.citeste();
-        System.out.println("Numar pagini carte: ");
-        nrPag = sc.nextInt();
-        System.out.println("Numar exemplare: ");
-        nrExempl = sc.nextInt();
-        sc.nextLine();
-        System.out.println("Cartea este disponibila in limbile (separate prin VIRGULA): ");
-        aux2 = sc.nextLine();
-        String[] arrr = aux2.split(",");
-        List<String> limba = new ArrayList<>(Arrays.asList(arrr));
-        System.out.println("Introduceti cateva cuvinte cheie ce descriu opera (separate prin VIRGULA): ");
-        aux3 = sc.nextLine();
-        String[] arr = aux3.split(",");
-        List<String> cuvCheie = new ArrayList<>(Arrays.asList(arr));
-
-        Carte c = new Carte(titlu, nou, limba, cuvCheie, index, nrExempl, nrPag, 0, 0, 0);
-
-        return c;
-    }
-
-    public void afiseaza() {
-        System.out.println("Cartea " + this.titlu + " este scrisa de " + this.autor.getNume() + " " + this.autor.getPrenume() + ".");
-        System.out.println("Disponibila in: " + this.limba);
-        System.out.println("Numar pagini: " + this.nrPagini);
-        System.out.println("Numar de exemplare: " + this.nrExemplare);
-        System.out.println("Numar exemplare cumparate: " + this.exemCumparate);
-        System.out.println("Pret varianta digitala: " + this.pretD);
-        System.out.println("Pret varianta fizica: " + this.pretF);
-    }
-
     @Override
     public double pretDigital() {
-        if (this.getTipText() == 1) {
+        if (getTip() == 1) {
             return 1.15 * getPret() + 0.25 * getNrPagini() % 10;
         }
-        else if (getTipText() == 2) {
+        else if (getTip() == 2) {
             return 1.07 * getPret() + 0.25 * getNrPagini() % 10;
         }
         else {
             System.out.println("Nu a fost inregistrat corespunzator tipul de text al operei.");
-            System.out.println(tipText);
+            System.out.println(tip);
         }
 
         return 0;
@@ -224,10 +177,10 @@ public class Carte implements Digital, Fizic {
 
     @Override
     public double pretFizic() {
-        if (this.tipText == 1) {
+        if (this.tip == 1) {
             return 1.2 * getPret() + 0.45 * getNrPagini() % 10;
         }
-        else if (this.tipText == 2) {
+        else if (this.tip == 2) {
             return 1.1 * getPret() + 0.45 * getNrPagini() % 10;
         }
         else {
@@ -236,4 +189,5 @@ public class Carte implements Digital, Fizic {
 
         return 0;
     }
+
 }
